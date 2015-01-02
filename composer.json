@@ -1,0 +1,22 @@
+{
+    "name": "somkiatprogrammer/payment",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Somkiat Laowajeesart",
+            "email": "somkiat_programmer@hotmail.com"
+        }
+    ],
+    "require": {
+		"braintree/braintree_php": "dev-master",
+        "paypal/rest-api-sdk-php": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Somkiatprogrammer": "src/"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sample Payment</title>
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/bootstrap/css/bootstrap-responsive.min.css"
+	rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+
+		<form class="form-payment" method="post">
+			<h2 class="form-payment-heading">Sample Payment</h2>
+			<div><?= $message; ?></div>
+			<fieldset>
+				<legend>Order</legend>
+				<input type="text" class="input-block-level span6" name="firstname"
+					placeholder="Firstname"> <input type="text"
+					class="input-block-level span6" name="lastname"
+					placeholder="Lastname"> <input type="text"
+					class="input-block-level span6" name="price" placeholder="Price"> <select
+					class="span3" name="currency">
+						<?php foreach($currency_lists as $val):?>
+						<option value="<?= $val?>"><?= $val?></option>
+						<?php endforeach;?>
+					</select>
+			</fieldset>
+
+			<fieldset>
+				<legend>Payment</legend>
+				<input type="text" class="input-block-level span12"
+					name="card_holder_name" placeholder="Credit card holder name"> <select
+					class="span3" name="card_type">
+						<?php foreach($card_lists as $val):?>
+						<option value="<?= $val?>"><?= $val?></option>
+						<?php endforeach;?>
+					</select><input type="text" class="input-block-level span9"
+					name="card_number"
+					placeholder="Credit card number Ex. 4417119669820331"> <input
+					type="text" class="input-block-level span6" name="card_expire"
+					placeholder="Credit card expiration Ex: MM/YYYY"> <input
+					type="text" class="input-block-level span3" name="card_ccv"
+					placeholder="Credit card CCV">
+
+			</fieldset>
+
+			<button class="btn btn-large btn-primary" type="submit">Submit</button>
+		</form>
+
+	</div>
+
+</body>
+</html>
